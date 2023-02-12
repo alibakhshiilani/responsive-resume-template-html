@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  color: #555;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #555;
+}
+
+/*
+    Grids
+*/
+.row {
+  display: flex;
+}
+
+.col-1 {
+  flex-basis: 8.333333%;
+  padding: 0.6rem;
+}
+
+.col-2 {
+  flex-basis: 16.666666%;
+  padding: 0.6rem;
+}
+
+.col-3 {
+  flex-basis: 24.999999%;
+  padding: 0.6rem;
+}
+
+.col-4 {
+  flex-basis: 33.333332%;
+  padding: 0.6rem;
+}
+
+.col-5 {
+  flex-basis: 41.666665%;
+  padding: 0.6rem;
+}
+
+.col-6 {
+  flex-basis: 49.999998%;
+  padding: 0.6rem;
+}
+
+.col-7 {
+  flex-basis: 58.333331%;
+  padding: 0.6rem;
+}
+
+.col-8 {
+  flex-basis: 66.666664%;
+  padding: 0.6rem;
+}
+
+.col-9 {
+  flex-basis: 74.999997%;
+  padding: 0.6rem;
+}
+
+.col-10 {
+  flex-basis: 83.33333%;
+  padding: 0.6rem;
+}
+
+.col-11 {
+  flex-basis: 91.666663%;
+  padding: 0.6rem;
+}
+
+.col-12 {
+  flex-basis: 99.999996%;
+  padding: 0.6rem;
+}
+
+.page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 992px;
+  margin: 15px auto;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+  background-color: #333;
+}
+.main-header .personal-detail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main-header .personal-detail img {
+  width: 100px;
+  border-radius: 50%;
+}
+.main-header .personal-detail .info {
+  margin-left: 1rem;
+}
+.main-header .contact-detail > ul > li {
+  list-style-type: none !important;
+  margin-bottom: 0.3rem;
+}
+.main-header .contact-detail > ul > li > a {
+  color: #fff;
+}
+
+.history {
+  width: 100%;
+  padding: 1rem;
+}
+.history header {
+  border-bottom: 1px solid #cad0d3;
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+}
+.history .list .list-item {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #cad0d3;
+}
+.history .list .list-item li {
+  flex-basis: 50%;
+  padding: 0.6rem;
+  list-style: none;
+}
+.history .list .list-item li.right {
+  text-align: right;
+}
+.history .list .list-item li.description {
+  width: 100%;
+  flex-basis: 100%;
+}
+.history .list .list-item li .inner-list header {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: 0;
+}
+.history .list .list-item li .inner-list ul {
+  padding-top: 0;
+}
+.history .list .list-item li .inner-list ul li {
+  list-style: none;
+  display: inline-block;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  background-color: #cad0d3;
+  color: #222;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  [class*=col-] {
+    flex-basis: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=resume.css.map */

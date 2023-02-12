@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  color: #555;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #555;
+}
+
+/*
+    Grids
+*/
+
+.row {
+  display: flex;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex-basis: $i * 8.333333%;
+    padding: 0.6rem;
+  }
+}
+
+.page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 992px;
+  margin: 15px auto;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+  background-color: #333;
+  .personal-detail {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      width: 100px;
+      border-radius: 50%;
+    }
+    .info {
+      margin-left: 1rem;
+    }
+  }
+
+  .contact-detail {
+    > ul {
+      > li {
+        list-style-type: none !important;
+        margin-bottom: 0.3rem;
+        > a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// .page.A4 {
+//   width: 21cm;
+//   height: 29.7cm;
+// }
+
+.history {
+  width: 100%;
+  padding: 1rem;
+  header {
+    border-bottom: 1px solid #cad0d3;
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  .list {
+    .list-item {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #cad0d3;
+      li {
+        flex-basis: 50%;
+        padding: 0.6rem;
+        list-style: none;
+        &.right {
+          text-align: right;
+        }
+        &.description {
+          width: 100%;
+          flex-basis: 100%;
+        }
+
+        .inner-list {
+          header {
+            margin-top: 1rem;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border: 0;
+          }
+          ul {
+            padding-top: 0;
+            li {
+              list-style: none;
+              display: inline-block;
+              border-radius: 0.3rem;
+              font-size: 0.9rem;
+              background-color: #cad0d3;
+              color: #222;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  [class*="col-"] {
+    flex-basis: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
